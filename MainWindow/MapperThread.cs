@@ -43,7 +43,7 @@ namespace FestivalInstrumentMapper
             _controller.Connect();
 
             _shouldStop = false;
-            _readThread = new Thread(ReadThread);
+            _readThread = new Thread(ReadThread) { IsBackground = true };
             _readThread.Start();
         }
 
